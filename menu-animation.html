@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/output.css">
+    <title>Document</title>
+</head>
+<body class="bg-orange-50">
+    <div class="bg-radial-[at_50%_10%] from-gray-100 to-gray-400 to-80% h-screen">
+        <nav class="bg-white p-2 shadow flex justify-between items-center w-full relative">
+            <!---Logo-->
+            <div class="text-xl text-orange-800">Horizontal</div>
+            <div class="md:hidden openMenu cursor-pointer">
+                <i class="fa-solid fa-bars w-6 h-6"></i>
+            </div>
+        </nav>
+
+        <div class="fixed mainMenu flex md:flex-row flex-col  items-center  top-0 right-0 
+        bg-white  w-64 h-full transform translate-x-full duration-300">
+            <button class=" closebtn  hover:shadow-sm w-full rounded-lg
+             border-gray-200 border-2 cursor-pointer">
+                <i class="fa-solid fa-xmark w-6 h-6 closeMenu"></i>
+            </button>
+            <ul class="space-y-5 mt-5">
+                <li class="group"><a href="#" class="group-hover:text-orange-500">Contact</a></li>
+                <li class="group"><a href="#" class="group-hover:text-orange-500">About</a></li>
+                <li class="group"><a href="#" class="group-hover:text-orange-500">Blog</a></li>
+                <li class="group"><a href="#" class="group-hover:text-orange-500">Services</a></li>
+                <li class="group"><a href="#" class="group-hover:text-orange-500">Products</a></li>
+                <li>
+                    <button class="border border-orange-700 rounded
+                    md:py-0 w-full px-1 py-2  text-sm hover:text-orange-700 hover:bg-red-50">Explorer</button>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script >
+        const openMenu = document.querySelector(".openMenu")
+        const closeMenu = document.querySelector(".closebtn")
+        const mainMenu = document.querySelector(".mainMenu")
+
+        openMenu.addEventListener("click", function(){
+            openMenu.style.opacity = 0;
+            mainMenu.classList.remove("translate-x-full")
+
+        });
+
+        closeMenu.addEventListener("click", function(){
+            openMenu.style.opacity = 100;
+            mainMenu.classList.add("translate-x-full")
+        });
+    </script>
+</body>
+</html>
