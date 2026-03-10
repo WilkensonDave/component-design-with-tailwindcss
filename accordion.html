@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/output.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex flex-col min-h-screen justify-center items-center">
+        <div class="flex flex-col w-1/2 p-5 shadow shadow-gray-300 rounded-md ">
+            <h1 class="mb-2 text-center font-semibold text-2xl">FAQ Section</h1>
+            <div id="container" class="flex flex-col">
+                <div class="accordion-content flex flex-col w-full  p-4 border-b cursor-pointer">
+                    <h2 class="text-2xl font-semibold">Question 1</h2>
+                    <div class="accordion hidden">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Nostrum voluptatem deserunt suscipit recusandae, quo consequatur
+                        consectetur enim incidunt obcaecati odio sed eos, nemo quaerat
+                        dolorum itaque iusto, neque voluptate id!
+                    </div>
+                </div>
+                <div class="accordion-content flex flex-col w-full  p-4 border-b cursor-pointer">
+                    <h2 class="text-2xl font-semibold">Question 2</h2>
+                    <div class="accordion hidden">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Provident voluptatem fuga blanditiis voluptatibus unde! 
+                        Accusamus obcaecati, dolore nostrum repudiandae libero quae placeat.
+                        Ex, cumque? Molestias non dicta at esse magnam.
+                    </div>
+                </div>
+                <div class="accordion-content flex flex-col w-full p-4 border-b cursor-pointer">
+                    <h2 class="text-2xl font-semibold">Question 3</h2>
+                    <div class="accordion hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Porro omnis soluta autem ea ex, magnam non? 
+                        Error repellat consectetur aut sunt eaque, 
+                        sit magni dignissimos nulla provident saepe nam cum.
+                    </div>
+                </div>
+            </div> 
+              
+        </div>
+        <button class="bg-blue-600 text-white text-xl font-semibold w-1/2 rounded-3xl mt-5 p-1">
+            Open Model
+        </button>
+    </div>
+    <script>
+        const Accordions = document.querySelectorAll(".accordion-content");
+        Accordions.forEach((content)=>{
+            content.addEventListener("click", function(){
+                content.querySelector(".accordion").classList.toggle("hidden");
+            })
+        })
+    </script>
+</body>
+</html>
